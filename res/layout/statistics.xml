@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rockbackground2"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="Results"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/result"
+            android:layout_marginTop="@dimen/activity_vertical_margin" >
+
+            <RelativeLayout
+                android:id="@+id/fortext"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1.05" >
+
+                <TextView
+                    android:id="@+id/maxacc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:text="Maximum acceleration"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/maxaccvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@id/maxacc"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/dumps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/dumpsvalue"
+                    android:layout_alignTop="@+id/dumpsvalue"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:gravity="bottom"
+                    android:text="Dumps"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/minacc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/dumps"
+                    android:layout_below="@id/maxacc"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:gravity="center"
+                    android:text="Minimum acceleration"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/dumpsvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/minaccvalue"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/minaccvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/dumpsvalue"
+                    android:layout_alignLeft="@+id/maxaccvalue"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/maxaccvalue"
+                    android:gravity="center"
+                    android:text="--"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/savebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:src="@drawable/save" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/container"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@color/yellow" >
+
+        </ListView>
+    </RelativeLayout>
+
+</FrameLayout>
